@@ -15,7 +15,7 @@ def auth_required(f):
     return decorated()
 
 
-@app.route('/')
+@app.route('/login')
 def index():
     if request.autharization and request.authorization.username == 'username' and request.authorization.password == 'password':
         return '<h1> You are logged in </h1>'
